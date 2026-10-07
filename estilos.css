@@ -63,7 +63,6 @@ a { color: var(--brand-ink); text-underline-offset: 2px; }
 }
 .summary ul { margin: 6px 0 0; }
 .path { font-weight: 600; }
-.todo { color: var(--todo); font-weight: 700; }
 nav.cards { display: grid; gap: 12px; margin-top: 20px; }
 nav.cards a {
   display: block;
