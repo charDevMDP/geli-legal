@@ -1,0 +1,79 @@
+/* Páginas legales de GeLi. Paleta de la marca (D26): slate #778899 y papaya #FFEFD5. */
+:root {
+  --bg: #fbf8f3;
+  --surface: #ffffff;
+  --text: #24282d;
+  --muted: #5b6470;
+  --brand: #778899;
+  --brand-ink: #4a5866;
+  --accent-bg: #ffefd5;
+  --border: #e3ddd2;
+  --todo: #b3261e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1f24;
+    --surface: #23282e;
+    --text: #ece7de;
+    --muted: #a9b1bb;
+    --brand: #9fb0c1;
+    --brand-ink: #c3cfdb;
+    --accent-bg: #2e3640;
+    --border: #39414a;
+    --todo: #ff8a80;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+header {
+  background: #778899;
+  color: #ffefd5;
+  padding: 28px 16px 24px;
+}
+header .wrap { display: flex; align-items: center; gap: 14px; }
+header img { width: 48px; height: 48px; border-radius: 12px; flex: none; }
+header a { color: inherit; text-decoration: none; }
+header .name { font-family: 'Fraunces', Georgia, serif; font-size: 1.6rem; font-weight: 600; line-height: 1.1; }
+/* Papaya sobre slate da ~3,2:1: alcanza solo como texto grande (≥ 18,7 px en negrita). */
+header .tag { font-size: 1.2rem; font-weight: 700; }
+.wrap { max-width: 720px; margin: 0 auto; }
+main { padding: 32px 16px 48px; }
+h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.35rem; margin: 36px 0 8px; color: var(--brand-ink); }
+h3 { font-size: 1.05rem; margin: 22px 0 4px; }
+p, li { max-width: 68ch; }
+ul { padding-left: 1.25em; }
+li { margin: 4px 0; }
+a { color: var(--brand-ink); text-underline-offset: 2px; }
+.updated { color: var(--muted); margin: 0 0 24px; }
+.summary {
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 0 0 8px;
+}
+.summary ul { margin: 6px 0 0; }
+.path { font-weight: 600; }
+.todo { color: var(--todo); font-weight: 700; }
+nav.cards { display: grid; gap: 12px; margin-top: 20px; }
+nav.cards a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--text);
+}
+nav.cards a strong { display: block; font-size: 1.1rem; color: var(--brand-ink); }
+footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; padding: 20px 16px 40px; }
+footer a { margin-right: 16px; }
